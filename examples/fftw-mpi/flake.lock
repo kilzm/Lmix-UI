@@ -1,22 +1,22 @@
 {
   "nodes": {
-    "lmix_23_05": {
+    "lmix": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "nurl": "nurl",
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1695652967,
-        "narHash": "sha256-j5sMA+httfVmiOOyQinxzcuFlinjk7SubYDZomhb1ZU=",
+        "lastModified": 1693239398,
+        "narHash": "sha256-MvzifaT/mT3Kv8aeCxvnNNXIQO7kulwrbYj2NDjg7Q4=",
         "owner": "kilzm",
-        "repo": "Lmix",
-        "rev": "9bf381fcc68b308b750e8a6b4f85b7c5524d13ad",
+        "repo": "lmix",
+        "rev": "5bf67a7d7186bdb00e1e42fdf58a455874d8ac5d",
         "type": "github"
       },
       "original": {
         "owner": "kilzm",
-        "repo": "Lmix",
+        "repo": "lmix",
         "type": "github"
       }
     },
@@ -52,22 +52,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1685566663,
-        "narHash": "sha256-btHN1czJ6rzteeCuE/PNrdssqYD2nIA4w48miQAFloM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4ecab3273592f27479a583fb6d975d4aba3486fe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "23.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nurl": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
@@ -88,8 +72,7 @@
     },
     "root": {
       "inputs": {
-        "lmix_23_05": "lmix_23_05",
-        "nixpkgs": "nixpkgs_3"
+        "lmix": "lmix"
       }
     },
     "systems": {

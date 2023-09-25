@@ -14,13 +14,13 @@
     pkgs = import nixpkgs { inherit system; };
 
     lmix = let 
-      filtered = (filterAttrs (n: _: hasPrefix "lmix" n) inputs);
+      filtered = filterAttrs (n: _: hasPrefix "lmix" n) inputs;
       flakes = attrValues filtered;
       parse-version = name: replaceStrings ["_"] ["."] (removePrefix "lmix_" name);
       versions = map parse-version (attrNames filtered);
     in { inherit flakes versions; };
 
-    modules = let
+    modules = let 
       getMods = pkgs: attrValues (filterAttrs (name: _: hasPrefix "_modules" name) pkgs);
     in foldr (_lmix: mods: mods ++ getMods _lmix.packages.${system}) [ ] lmix.flakes;
 
@@ -44,8 +44,9 @@
       default = lmod2flake;
       lmod2flake = {
         type = "app";
-        program = let inherit (self.packages.${system}) lmod2flake; 
-          in "${lmod2flake}/bin/lmod2flake";
+        program = let 
+          inherit (self.packages.${system}) lmod2flake; 
+        in "${lmod2flake}/bin/lmod2flake";
       };
     };
   };
